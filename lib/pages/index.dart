@@ -1,6 +1,6 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_chmelnitzk_2_16_11/pages/detail_screen.dart';
 import 'package:flutter_chmelnitzk_2_16_11/themes/colors.dart';
 import 'package:http/http.dart' as http;
 
@@ -36,16 +36,45 @@ class _IndexPageState extends State<IndexPage> {
       isLoading = false;
     }
     print(users);
-    print('run');
   }
+
+  final makeBottom = Container(
+    height: 55.0,
+    child: BottomAppBar(
+      color: Color.fromRGBO(58, 66, 86, 1.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.thumb_up, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.supervisor_account, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.account_box, color: Colors.white),
+            onPressed: () {},
+          )
+        ],
+      ),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Listing of SuperHeros"),
+        centerTitle: true,
       ),
       body: getBody(),
+      bottomNavigationBar: makeBottom,
     );
   }
 
@@ -108,6 +137,58 @@ class _IndexPageState extends State<IndexPage> {
               )
             ],
           ),
+          onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => 
+            Container(
+              child: Column(children:[
+Text('Marvel'),
+Text('Super hero'),
+Text('Intelligence'),
+
+Text('Strength'),
+Text('Speed'),
+Text('Durability'),
+Text('Power'),
+Text('Combat'),
+Text('gender'),
+Text('race'),
+Text('height'),
+Text('weight'),
+Text('eye-color'),
+Text('hair-color'),
+
+
+
+// u['biography'],
+    // u['powerstats']['intelligence'],
+    // u['powerstats']['strength'],
+    // u['powerstats']['speed'],
+    // u['powerstats']['durability'],
+    // u['powerstats']['power'],
+    // u['powerstats']['combat'],
+    // u['appearance']['gender'],
+    // u['appearance']['race'],
+    // u['appearance']['height'][1],
+    // u['appearance']['weight'][1],
+    // u['appearance']['eye-color'],
+    // u['appearance']['hair-color'],
+    // u['image']
+
+
+              ]),
+
+              
+            )
+            
+            // DetailScreen(todo: 'GO'),
+            
+            // print('gogogogog'),
+          ),
+        );
+      },
         ),
       ),
     );
