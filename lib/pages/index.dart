@@ -161,8 +161,18 @@ class _IndexPageState extends State<IndexPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => DetailHeroPage(name: fullName)
-                  ),
+                  builder: (context) => DetailHeroPage(
+                        name: item['name'],
+                        imageSrc: item['image']['url'],
+                        intelligence:item['powerstats']['intelligence'].toString(),
+                        strength: item['powerstats']['strength'].toString(),
+                        speed: item['powerstats']['speed'].toString(),
+                        biography: item['biography']['full-name'],
+                        work: item['work']['occupation'],
+                        gender: item['appearance']['gender'],
+                        race: item['appearance']['race'],
+                        height: item['appearance']['height'][1],
+                      )),
             );
           },
         ),
@@ -170,5 +180,3 @@ class _IndexPageState extends State<IndexPage> {
     );
   }
 }
-
-
