@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class DetailHeroPage extends StatelessWidget {
   final String name;
   final String imageSrc;
@@ -67,8 +68,8 @@ class DetailHeroPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(left: 27.0),
                       child: Container(
-                          width: 360,
-                          height: 360,
+                          width: 300,
+                          height: 300,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
