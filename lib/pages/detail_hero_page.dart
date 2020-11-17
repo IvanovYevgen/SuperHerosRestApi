@@ -1,10 +1,34 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_chmelnitzk_2_16_11/components/textMaker.dart';
 
 class DetailHeroPage extends StatelessWidget {
+  final String name;
+  final String intelligence;
+  final String strength;
+  final String speed;
+  final String biography;
+  final String work;
+  final String power;
+  final String gender;
+  final String eyeColor;
+  final String race;
+  final String height;
   const DetailHeroPage({
     Key key,
+    this.name,
+    this.intelligence,
+    this.strength,
+    this.speed,
+    this.biography,
+    this.work,
+    this.power,
+    this.gender,
+    this.eyeColor,
+    this.race,
+    this.height,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,23 +45,30 @@ class DetailHeroPage extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                 Row(
                   children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'MARVEL',
-                        fontsize: 30.0,
-                        fontWeight: FontWeight.bold),
+
+Padding(
+      padding: const EdgeInsets.only(left: 40.0),
+      child: Text('MARVEL',
+          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold)),
+    ),
                   ],
                 ),
-                Row(
+Row(
                   children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Super hero',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
+
+Padding(
+      padding: const EdgeInsets.only(left: 40.0),
+      child: Text('Super hero',
+          style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold)),
+    ),
                   ],
                 ),
+
+
+
                 SizedBox(height: 20.0),
+
+
                 Row(
                   children: [
                     Padding(
@@ -56,265 +87,235 @@ class DetailHeroPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 30.0),
-                Row(
+Row(
                   children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'NAME',
-                        fontsize: 30.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Intelligence',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Intelligence',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Strength',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Strength',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Speed',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Speed',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
 
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Biography',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Biography',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-
-  SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Work',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Work',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-
-
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Durability',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Durability',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Power',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Power',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Gender',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Gender',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-  SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Iye-color',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Iye-color',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
+Padding(
+      padding: const EdgeInsets.only(left: 40.0),
+      child: Text(name,
+          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold)),
+    ),
                   ],
                 ),
 
 
-               SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Race',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Race',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                  SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Height',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Height',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-      
-              SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Iye-color',
-                        fontsize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-                SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    TextMaker(
-                        padding: const EdgeInsets.only(left: 40.0),
-                        text: 'Iye-color',
-                        fontsize: 14.0,
-                        fontWeight: FontWeight.bold),
-                  ],
-                ),
-               
-// biography   work
+
+
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: name,
+//                         fontsize: 30.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Intelligence',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: intelligence,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Strength',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: strength,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Speed',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: speed,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Biography',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: biography,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Work',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: work,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Power',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: power,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Gender',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: gender,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Eye-color',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: eyeColor,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Race',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: race,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 10.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: 'Height',
+//                         fontsize: 20.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+//                 SizedBox(height: 5.0),
+//                 Row(
+//                   children: [
+//                     TextMaker(
+//                         padding: const EdgeInsets.only(left: 40.0),
+//                         text: height,
+//                         fontsize: 14.0,
+//                         fontWeight: FontWeight.bold),
+//                   ],
+//                 ),
+
+              
+
+// // biography   work
 // u['biography'],
                 // u['powerstats']['intelligence'],
                 // u['powerstats']['strength'],

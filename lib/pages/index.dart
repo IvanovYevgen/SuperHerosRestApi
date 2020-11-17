@@ -161,7 +161,7 @@ class _IndexPageState extends State<IndexPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => DetailHeroPage()
+                  builder: (context) => DetailHeroPage(name: fullName)
                   ),
             );
           },
