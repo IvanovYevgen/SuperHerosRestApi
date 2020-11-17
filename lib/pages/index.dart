@@ -5,6 +5,7 @@ import 'package:flutter_chmelnitzk_2_16_11/pages/empty_page_three.dart';
 import 'package:flutter_chmelnitzk_2_16_11/pages/empty_page_two.dart';
 import 'package:flutter_chmelnitzk_2_16_11/themes/colors.dart';
 import 'package:http/http.dart' as http;
+import 'detail_hero_page.dart';
 import 'empty_page_four.dart';
 
 class IndexPage extends StatefulWidget {
@@ -50,61 +51,6 @@ class _IndexPageState extends State<IndexPage> {
     print(users);
   }
 
-  // final makeBottom = Container(
-  //   height: 55.0,
-  //   child: BottomNavigationBar(
-  //     selectedItemColor: Color(0xFF003700),
-  //     unselectedItemColor: Color(0xFF67a030),
-  //     type: BottomNavigationBarType.fixed,
-  //     // onTap: onTabTapped,
-  //     currentIndex: 0,
-  //     items: [
-  //       BottomNavigationBarItem(
-  //         icon: Icon(Icons.home, color: Colors.white),
-  //        label: '',
-  //       ),
-  //       BottomNavigationBarItem(
-  //         icon: Icon(Icons.thumb_up, color: Colors.white),
-  //         label: '',
-  //       ),
-  //       BottomNavigationBarItem(
-  //         icon: Icon(Icons.supervisor_account, color: Colors.white),
-  //         label: '',
-  //       ),
-  //       BottomNavigationBarItem(
-  //         icon: Icon(Icons.account_box, color: Colors.white),
-  //         label: '',
-  //       )
-  //     ],
-  //   ),
-  // );
-
-  // BottomAppBar(
-  //   color: Color.fromRGBO(58, 66, 86, 1.0),
-  //   child: Row(
-  //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //     children: <Widget>[
-  //       IconButton(
-  //         icon: Icon(Icons.home, color: Colors.white),
-  //         onPressed: () {},
-  //       ),
-  //       IconButton(
-  //         icon: Icon(Icons.thumb_up, color: Colors.white),
-  //         onPressed: () {},
-  //       ),
-  //       IconButton(
-  //         icon: Icon(Icons.supervisor_account, color: Colors.white),
-  //         onPressed: () {},
-  //       ),
-  //       IconButton(
-  //         icon: Icon(Icons.account_box, color: Colors.white),
-  //         onPressed: () {},
-  //       )
-  //     ],
-  //   ),
-  //    ),
-  // );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,19 +66,19 @@ class _IndexPageState extends State<IndexPage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.thumb_up),
-            label: 'Home',
+            icon: Icon(Icons.favorite),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.supervisor_account),
-            label: 'Home',
+            icon: Icon(Icons.grade),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_box),
-            label: 'Home',
+            icon: Icon(Icons.wb_sunny),
+            label: '',
           ),
         ],
         onTap: (index) {
@@ -215,54 +161,7 @@ class _IndexPageState extends State<IndexPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => Scaffold(
-                        // backgroundColor: Color(0xFF0c0d29),
-                        appBar: AppBar(
-                          backgroundColor: Color(0xFF0c0d29),
-                        ),
-                        body: Container(
-                          width: double.infinity,
-                          color: Color(0xFF0c0d29),
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Marvel'),
-                                Text('Super hero'),
-                                Text('Intelligence'),
-
-                                Text('Strength'),
-                                Text('Speed'),
-                                Text('Durability'),
-                                Text('Power'),
-                                Text('Combat'),
-                                Text('Gender'),
-                                Text('Race'),
-                                Text('Height'),
-                                Text('Weight'),
-                                Text('Hye-color'),
-                                Text('Hair-color'),
-
-// u['biography'],
-                                // u['powerstats']['intelligence'],
-                                // u['powerstats']['strength'],
-                                // u['powerstats']['speed'],
-                                // u['powerstats']['durability'],
-                                // u['powerstats']['power'],
-                                // u['powerstats']['combat'],
-                                // u['appearance']['gender'],
-                                // u['appearance']['race'],
-                                // u['appearance']['height'][1],
-                                // u['appearance']['weight'][1],
-                                // u['appearance']['eye-color'],
-                                // u['appearance']['hair-color'],
-                                // u['image']
-                              ]),
-                        ),
-                      )
-
-                  // DetailScreen(todo: 'GO'),
-
-                  // print('gogogogog'),
+                  builder: (context) => DetailHeroPage()
                   ),
             );
           },
@@ -271,3 +170,5 @@ class _IndexPageState extends State<IndexPage> {
     );
   }
 }
+
+
